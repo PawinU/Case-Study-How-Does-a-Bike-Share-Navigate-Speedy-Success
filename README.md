@@ -52,7 +52,7 @@ The data is a  monthly report collected in CSV files
 >library(skimr)
 >library(janitor)
 >library(readr)
-# use sql in R
+# use SQL in R
 >install.packages("sqldf")
 >library(sqldf)
 
@@ -142,7 +142,7 @@ count (ride_length)
 
 Analyze.
 
-## find mean, min, max of ride_length
+## find the mean, min, max of ride_length
 >tripdata_2%>%summarise(avg_length_ride=mean(ride_length),min_ride_length=min(ride_length),max_ride_length=max(ride_length))
 # A tibble: 1 × 3
 avg_length_ride min_ride_length max_ride_length
