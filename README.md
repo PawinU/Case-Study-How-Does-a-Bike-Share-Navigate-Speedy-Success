@@ -150,19 +150,18 @@ avg_length_ride min_ride_length max_ride_length
   1 1327.833 secs   1 secs          3356649 secs
 
 >sqldf("select count (member_casual) from tripdata_2 where member_casual == 'member'")
-##count (member ) 2989093
 
 >sqldf("select count (member_casual) from tripdata_2 where member_casual == 'casual'")
-##count (casual)  2488929
+
 
 >aggregate(tripdata_2$ride_length ~ tripdata_2$member_casual, FUN = mean)
-## casual 1930.9227 secs member 825.6588 secs
+### casual 1930.9227 secs member 825.6588 secs
 
 >aggregate(tripdata_2$ride_length ~ tripdata_2$member_casual, FUN = max)
-## casual 3356649 secs, member  93596 secs
+### casual 3356649 secs, member  93596 secs
 
 >aggregate(tripdata_2$ride_length ~ tripdata_2$member_casual, FUN = min)
-## casual 1secs, member  1 secs
+### casual 1secs, member  1 secs
 
 
 ##Find average of ride_length by day_of_week. 
