@@ -144,13 +144,11 @@ count (ride_length)
 >tripdata_2$started_time <- format(tripdata_2$started_at,"%H:%M:%S")
 >tripdata_2$ended_time <- format(tripdata_2$ended_at,"%H:%M:%S")
 
-
-
 Analyze.
 
 ## find the mean, min, max of ride_length
 >tripdata_2%>%summarise(avg_length_ride=mean(ride_length),min_ride_length=min(ride_length),max_ride_length=max(ride_length))
-# A tibble: 1 × 3
+
 avg_length_ride min_ride_length max_ride_length
 <drtn>          <drtn>          <drtn>         
   1 1327.833 secs   1 secs          3356649 secs
